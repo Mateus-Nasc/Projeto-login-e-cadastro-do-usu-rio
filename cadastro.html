@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+  
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <title>Project Responsive</title>
+</head>
+<body id="cadastroPage" >
+    <header>
+        <div class="logo">
+            <input type="button" id="singup" value="Share">
+   
+        </div>
+        
+        <nav id="nav">
+            <button id="btn-mobile" aria-haspopup="true" aria-label="Abrir Menu" aria-expanded="false">Menu
+
+                <span id="hamburger"></span>
+
+            </button>
+            <ul class="menu" role="menu">
+                <li><a href="index.html" >Login</a></li>
+                <li><a href="cadastro.html" class="select">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        
+        <article class="login-esq">
+            <section>
+                <h3>Welcome<br> to the<br> Registration<br> Page</h3>
+                <img src="img/imglogin2.svg" alt="">
+                <section id="btn-social">
+                    <a href="https://twitter.com" class="twiter"><i class="fa-brands fa-twitter"></i> Login with Twitter</a>
+                    <a href="https://www.google.com" class="google"><i class="fa-brands fa-google"></i> Connect to Google</a>
+                    <a href="https://www.facebook.com" class="face"><i class="fa-brands fa-facebook"></i> Sign up with Facebook</a>
+                   
+                </section>
+            </section>
+        </article>
+
+        <form action="">
+
+            <img src="img/imglogin1.svg" alt="">
+         
+            <fieldset>
+                
+                 <h1>Cadas<span class="login">tre-se</span></h1>
+            
+                <div class="inputs">
+                    <label for="nome"><i class="fa-solid fa-circle-user"></i></label>
+                    <input type="name" id="nome" placeholder="Username" class="requireds " required oninput="validateName()">
+                    <button disabled id="btn-Error"><i class="fa-solid fa-circle-exclamation"></i></button>
+                    <button disabled id="btn-Valid"><i class="fa-solid fa-circle-check"></i></button>
+                    <div class="underline"></div>
+                </div>
+                <span class="invalidCampo">Insira no minimo 3 caracteres</span>
+
+                <div class="inputs">
+                    <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" id="email" placeholder="Enter your email" class="requireds " required oninput="validateEmail()">
+                    <button disabled id="btn-Error"><i class="fa-solid fa-circle-exclamation"></i></button>
+                    <button disabled id="btn-Valid"><i class="fa-solid fa-circle-check"></i></button>
+                    <div class="underline"></div>
+                </div>
+                <span class="invalidCampo">Inserir um E-mail válido ativo</span>
+
+                <div class="inputs">
+                    <label for="senha"><i class="fa-solid fa-lock"></i> </label>
+                    <input type="password" id="senha" placeholder="Password" class="requireds " required oninput="validateSenha()">
+                    <button id="btn-senha"><i class="fa-solid fa-eye"></i></button>
+                    <div class="underline"></div>
+                </div>
+                <span class="invalidCampo">Insira no minimo 8 caracteres</span>
+
+                <div class="inputs">
+                    <label for="confirmSenha"><i class="fa-solid fa-eye"></i></label>
+                    <input type="password" id="confirmSenha" placeholder="Confirm Password" class="requireds " required oninput="validateConfirmSenha()">
+                    <button id="btn-confirmSenha"><i class="fa-solid fa-eye"></i></button>
+                    <div class="underline"></div>
+                </div>
+                <span class="invalidCampo">Insira sua senha corretamente</span>
+
+                <div id="social">
+                    <span class="conect">Conecte Sua Rede Social</span>
+                 <a href="https://twitter.com" class="twiter"><i class="fa-brands fa-twitter"></i></a>
+                 <a href="https://www.google.com" class="google"><i class="fa-brands fa-google"></i></a>
+                 <a href="https://www.facebook.com" class="face"><i class="fa-brands fa-facebook"></i></a>
+                 <a href="https://www.instagram.com" class="insta"><i class="fa-brands fa-instagram"></i> </a> 
+                </div>
+
+                <input onclick="cadastrar()" type="submit" value="Cadastrar" id="btn-cadastrar">
+             
+            </fieldset>
+            <span class="validRegistration">Cadastrando usuário...</span>
+            <span class="invalidRegistration">Erro ao cadastrar usuário</span>
+        </form>
+
+    </main>
+    <footer>
+        <nav>
+            <h3>Suporte</h3>
+            <ul>
+                <li><a href="">Cartão sem anuidade</a></li>
+                <li><a href="">Como pedir seu cartão</a></li>
+                <li><a href="">Como ativar o débito</a></li>
+                <li><a href="">Como desativar aproximação</a></li>
+            </ul>
+        </nav>
+
+        <section class="contato">
+            <h3>Quem somos</h3>
+            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting.</h4>
+            <h5><a href="">Nossa história</a></h5>
+        </section>
+
+        <section class="contato">
+            <h3>Contato</h3>
+            <h4>E-mail: nbank@gmail.com</h4>
+            <h4>Tel:(21) 98865-3524</h4>
+
+            <h5><a href="">Entre em contato com agente</a></h5>
+        </section>
+       
+    </footer>
+
+    <script src="js/projeto.js"></script>
+
+</body>
+</html>
