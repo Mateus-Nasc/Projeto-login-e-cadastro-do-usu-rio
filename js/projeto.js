@@ -1,9 +1,5 @@
         
-        // const nome = prompt("Qual é o seu nome?")
-        // alert("Olá " + nome + " Seja Bem Vindo")
-
-        // Botão Menu
-
+        // Botao menu 
         const bntmobile = document.getElementById('btn-mobile');
 
         function toggleMenu(event) {
@@ -25,8 +21,7 @@
 
        
 
-        // Variaveis pegando as referencias do input
-    
+        // Variaveis referencias do input
 
         let invalidCampo = document.querySelectorAll('.invalidCampo')
         let campo = document.querySelectorAll('.requireds')
@@ -46,7 +41,7 @@
         let confirmSenha = document.querySelector('#confirmSenha')
 
 
-        // Função ver senha
+        // Botao ver senha
         btnSenha.addEventListener('click', (e) => {
           let inputSenha = document.querySelector('#senha')
 
@@ -68,30 +63,7 @@
             }
             e.preventDefault()
         })
-         // fim função */
-
-        // Função confirmar senha
-     /* confirmSenha.addEventListener('keyup', () => {
-
-            if (confirmSenha.value != campo[2].value) {
-                confirmSenha.setAttribute('style', 'background: rgba(255, 0, 0, 0.140)')
-                validconfirmSenha = false
-            }   else {
-                confirmSenha.setAttribute('style', 'background: rgba(4, 180, 4, 0.180)')
-                validconfirmSenha = true
-            }
         
-        })
-        
-       /* nome.addEventListener('keyup', () => {
-            if (nome.value.length < 4) {
-                nome.setAttribute('style', ' background: rgba(255, 0, 0, 0.140)')
-                validNome = false
-            }   else {
-                nome.setAttribute('style', ' background: rgba(4, 180, 4, 0.180) ')
-                validNome = true
-            }
-        }) */
 
             function setError(index) { // Função de erro no campo
                 invalidCampo[index].style.display = 'block'
@@ -153,17 +125,7 @@
                 }
             }
 
-       /* email.addEventListener('keyup', () => {
-            if (email.value.length < 5) {
-                email.setAttribute('style', 'background: rgba(255, 0, 0, 0.140)')
-                validEmail = false
-            }   else {
-                email.setAttribute('style', 'background: rgba(4, 180, 4, 0.180)')
-                validEmail = true
-            }
-        }) */
-
-        // Função para cadastrar 
+        // Função para cadastrar o usuário
         function cadastrar() {
             if (validNome && validEmail && validSenha && validconfirmSenha) {
                 let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]' )
@@ -183,9 +145,9 @@
 
                 setTimeout(() => {
 
-                    window.location.href = '../index.html'
+                    window.location.href = 'index.html'
 
-                }, 5000)
+                }, 3000)
                 
 
             }   else {
